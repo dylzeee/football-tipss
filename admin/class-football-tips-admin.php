@@ -142,34 +142,7 @@ class Football_Tips_Admin
         echo '<input type="text" name="football_tips_api_key" value="' . esc_attr($api_key) . '" style="width: 100%;">';
     }
 
-    /**
-     * Render the sports selection checkboxes.
-     */
-    public static function render_sports_selection_field()
-    {
-        $enabled_sports = get_option('football_tips_enabled_sports', []);
-        if (!is_array($enabled_sports)) {
-            $enabled_sports = [];
-        }
 
-        $sports = self::fetch_sports_from_api();
-
-        if (empty($sports)) {
-            echo '<p>' . esc_html__('Failed to fetch sports from the API. Please ensure your API key is valid.', 'football-tips') . '</p>';
-            return;
-        }
-
-        foreach ($sports as $sport) {
-            $sport_key = esc_attr($sport['key']);
-            $sport_name = esc_html($sport['title']);
-            $checked = in_array($sport_key, $enabled_sports, true) ? 'checked' : '';
-
-            echo '<label style="display:block;margin-bottom:5px;">';
-            echo '<input type="checkbox" name="football_tips_enabled_sports[]" value="' . $sport_key . '" ' . $checked . '> ';
-            echo $sport_name;
-            echo '</label>';
-        }
-    }
 
     /**
      * Render the Result Tips page.
@@ -441,11 +414,6 @@ class Football_Tips_Admin
         }
     }
 
-
-
-
-
-
     /**
      * Format the notification for display.
      *
@@ -528,25 +496,73 @@ class Football_Tips_Admin
         return sprintf('<a href="%s">%s</a>', esc_url($link), esc_html($message));
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Fetch sports from API.
      */
     private static function fetch_sports_from_api()
     {
+        error_log("Called it bro");
+        //return;
         // Implementation remains the same.
+        $cached_sports = get_transient('ftm_sports_list');
+        if ($cached_sports) {
+            return $cached_sports;
+        }
+
+        $api_key = get_option('football_tips_api_key', '');
+        if (empty($api_key)) {
+            wp_send_json_error(['message' => __('API Key is missing.', 'sports-betting-tips')]);
+        }
+
+        $response = wp_remote_get("https://api.the-odds-api.com/v4/sports?apiKey={$api_key}");
+
+        if (is_wp_error($response)) {
+            wp_send_json_error(['message' => __('Failed to fetch sports.', 'sports-betting-tips')]);
+        }
+
+        $body = wp_remote_retrieve_body($response);
+        $sports = json_decode($body, true);
+
+        if (! is_array($sports)) {
+            wp_send_json_error(['message' => __('Invalid API response.', 'sports-betting-tips')]);
+        }
+
+        // Cache the response for 24 hours.
+        set_transient('ftm_sports_list', $sports, DAY_IN_SECONDS);
+
+        // wp_send_json_success($sports);
+
+        return $sports;
+    }
+
+    /**
+     * Render the sports selection checkboxes.
+     */
+    public static function render_sports_selection_field()
+    {
+        $enabled_sports = get_option('football_tips_enabled_sports', []);
+        if (!is_array($enabled_sports)) {
+            $enabled_sports = [];
+        }
+
+        $sports = self::fetch_sports_from_api();
+        error_log(print_r($sports, true));
+
+        if (empty($sports)) {
+            echo '<p>' . esc_html__('Failed to fetch sports from the API. Please ensure your API key is valid.', 'football-tips') . '</p>';
+            return;
+        }
+
+        foreach ($sports as $sport) {
+            $sport_key = esc_attr($sport['key']);
+            $sport_name = esc_html($sport['title']);
+            $checked = in_array($sport_key, $enabled_sports, true) ? 'checked' : '';
+
+            echo '<label style="display:block;margin-bottom:5px;">';
+            echo '<input type="checkbox" name="football_tips_enabled_sports[]" value="' . $sport_key . '" ' . $checked . '> ';
+            echo $sport_name;
+            echo '</label>';
+        }
     }
 }
 

@@ -58,7 +58,7 @@
                 { key: 'draw_no_bet', name: 'Draw No Bet' },
                 { key: 'double_chance', name: 'Double Chance' },
                 { key: 'btts', name: 'Both Teams to Score' },
-                { key: 'alternate_spreads', name: 'Asian Handicap' },
+                { key: 'spreads', name: 'Handicap' },
                 { key: 'totals', name: 'Total Goals Over/Under' },
                 { key: 'team_totals', name: 'Team Total Goals' },
                 { key: 'alternate_totals', name: 'Alternate Totals' },

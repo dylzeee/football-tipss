@@ -310,7 +310,7 @@ class Football_Tips_Profile
             'draw_no_bet' => 'Draw No Bet',
             'double_chance' => 'Double Chance',
             'btts' => 'Both Teams to Score',
-            'alternate_spreads' => 'Asian Handicap',
+            'spreads' => 'Handicap',
             'totals' => 'Total Goals Over/Under',
             'team_totals' => 'Team Total Goals',
             'alternate_totals' => 'Alternate Totals',

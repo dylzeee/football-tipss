@@ -1,0 +1,314 @@
+/* Form Wrapper */
+.football-tips-form-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+/* Selects and Dropdowns */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.form-select:focus {
+    border-color: #0073aa;
+    outline: none;
+}
+
+/* Dynamic Fields */
+.dynamic-field-wrapper {
+    margin-top: 20px;
+}
+
+/* Submit Button */
+.submit-field-wrapper button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0073aa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 30px;
+}
+
+.submit-field-wrapper button:hover {
+    background-color: #005f8a;
+}
+
+/* No Leagues Message */
+.no-leagues-message {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 16px;
+    /* Slightly less space between fields */
+}
+
+/* Labels */
+.dynamic-field-wrapper label {
+    font-size: 14px !important;
+    /* Smaller label size */
+    font-weight: normal !important;
+    /* Regular weight for a cleaner look */
+    margin-bottom: 4px;
+    /* Closer to the dropdown for compactness */
+    display: block;
+    color: #666;
+    /* Softer color to reduce prominence */
+}
+
+#football-tips-form label {
+    font-size: 14px !important;
+    /* Smaller label size */
+    font-weight: normal !important;
+    /* Regular weight for a cleaner look */
+    margin-bottom: 4px;
+    /* Closer to the dropdown for compactness */
+    display: block;
+    color: #666;
+}
+
+/* Stake Input */
+#stake-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+/* Returns/Results Output */
+.returns-wrapper {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.returns-wrapper.positive {
+    color: #28a745;
+    /* Green for positive returns */
+    background-color: #eaffea;
+}
+
+.returns-wrapper.negative {
+    color: #dc3545;
+    /* Red for losses */
+    background-color: #ffeaea;
+}
+
+/* Style for the Tipping Settings form container */
+#tipping-settings-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header */
+#tipping-settings-form h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Form labels */
+#tipping-settings-form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #555;
+}
+
+/* Form input fields */
+#tipping-settings-form input[type="text"],
+#tipping-settings-form input[type="number"],
+#tipping-settings-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+#tipping-settings-form button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    /* background-color: #0073aa;
+    color: #fff; */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* #tipping-settings-form button[type="submit"]:hover {
+    background-color: #005d8f;
+} */
+
+/* Success and error messages */
+#tipping-settings-form .success-message,
+#tipping-settings-form .error-message {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+#tipping-settings-form .success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+#tipping-settings-form .error-message {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+.private-tips-message {
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.private-tips-message p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.private-tips-message .button {
+    padding: 10px 20px;
+    /* background-color: #0073aa;
+    color: #fff; */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* .private-tips-message .button:hover {
+    background-color: #005177;
+} */
+
+.tips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tips-table th,
+.tips-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tips-table th {
+    background-color: #f5f5f5;
+}
+
+.tips-spinner {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+.pagination-button {
+    padding: 5px 10px !important;
+}
+
+.pagination-button:not(.active) {
+    background-color: transparent !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s, color 0.2s !important;
+    color: #28a745 !important;
+}
+
+/* .pagination-button.active {
+    background-color: #0073aa;
+    /* WordPress blue */
+/* color: #fff;
+    border-color: #0073aa; */
+/*}*/
+
+.pagination-button:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+/* Tips Result Colors */
+.result-win {
+    background-color: #c4f8d1c0;
+}
+
+.result-loss {
+    background-color: #ffdce2;
+}
+
+.result-push {
+    background-color: #fff;
+    /* Black (default) or inherit */
+}

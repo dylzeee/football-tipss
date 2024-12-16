@@ -1,0 +1,123 @@
+.leaderboard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.leaderboard h2 {
+    text-align: center;
+    color: #333;
+}
+
+.leaderboard ol {
+    list-style: decimal;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.leaderboard li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.leaderboard-container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.leaderboard-tabs li {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.leaderboard-tabs li.active {
+    border-bottom: 2px solid #0073aa;
+    color: #0073aa;
+}
+
+.leaderboard-content {
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Tips Table */
+.football-tips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.football-tips-table th,
+.football-tips-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.football-tips-table th {
+    background-color: #f4f4f4;
+}
+
+.tip-result-win {
+    background-color: #d4edda;
+}
+
+.tip-result-loss {
+    background-color: #f8d7da;
+}
+
+.tip-result-push {
+    background-color: #ffeeba;
+}
+
+.tip-result {
+    font-weight: bold;
+    color: #333;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #0073aa;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #005f8d;
+}
+
+.pagination .current {
+    background-color: #0073aa;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

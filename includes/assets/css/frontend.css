@@ -1,0 +1,31 @@
+#football-tips-form {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+#football-tips-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#football-tips-form select,
+#football-tips-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#football-tips-form button {
+    background-color: #0073aa;
+    color: #fff;
+    cursor: pointer;
+}
+
+#football-tips-form button:hover {
+    background-color: #005177;
+}
